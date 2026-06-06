@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://by6fnss1efs50"]
 
-[ext_resource type="Texture2D" uid="uid://cuwkhoxyvv33k" path="res://assets/chess/pixel chess_v1.2/boards/board_persp_04.png" id="1_k16oe"]
+[ext_resource type="Texture2D" uid="uid://c7edx4u52wh6i" path="res://assets/chess/pixel chess_v1.2/boards/board_plain_03.png" id="1_k16oe"]
 [ext_resource type="Script" uid="uid://chuxfmbpfnkx2" path="res://scripts/chessBoard/chessBoard.gd" id="2_3hvew"]
 
-[node name="chessBoard" type="Sprite2D" unique_id=1328865869]
-texture = ExtResource("1_k16oe")
+[node name="chessBoard" type="Node2D" unique_id=1347572872]
+z_index = -4
+z_as_relative = false
 script = ExtResource("2_3hvew")
 
+[node name="chessBoardSprite" type="Sprite2D" parent="." unique_id=686943113]
+z_index = -99
+texture = ExtResource("1_k16oe")
+
 [node name="pieces" type="Node2D" parent="." unique_id=15631089]
+position = Vector2(-64, 45)
 
 [node name="dots" type="Node2D" parent="." unique_id=2105342251]
 
