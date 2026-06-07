@@ -5,6 +5,7 @@
 [node name="inDevFoodChess" type="Node2D" unique_id=264162488]
 
 [node name="mainCamera2D" type="Camera2D" parent="." unique_id=468462005]
+position = Vector2(71, -71)
 zoom = Vector2(3.09, 3.09)
 
 [node name="canvasLayer" type="CanvasLayer" parent="." unique_id=331668424]

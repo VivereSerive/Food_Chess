@@ -6,8 +6,8 @@ extends Node2D
 
 # Board Config
 const boardSize : int = 8
-const bTopMargin : int = 20 # must match px height of the empty space.
-const bBottomMargin : int = 27 # must match px height of the empty space.
+const bTopMargin : int = 20 # Redundant
+const bBottomMargin : int = 37 # must match px height of the empty space.
 const bLeftMargin : int = 7 # must match px width of the empty space.
 const bRightMargin : int = 7 # must match px width of the empty space.
 const squareWidth : int = 16 # must match px width of the square.
@@ -65,14 +65,21 @@ func _physics_process(delta: float) -> void:
 	pass
 
 ## Function Declerations
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			print("Click")
+
 func _display_board():
 	for boardRow in boardSize:
 		for boardColumn in boardSize:
 			## Initializing Pieces
 			var pieceInit = PIECE_HOLDER.instantiate()
 			pieces.add_child(pieceInit)
-			pieceInit.position = Vector2(boardColumn * squareWidth, -boardRow * squareHeight)
-			
+			pieceInit.global_position = Vector2(
+				bLeftMargin + (boardColumn * squareWidth) + (squareWidth/2),
+				-bBottomMargin + (-boardRow * squareHeight) - (squareHeight/2)
+			)
 			# Assign Texture
 			# Positive = White, Negative = Black, ZERO = empty
 			# {"Pawn": 1, "Knight": 2, "Bishop": 3, "Rook": 4, "Queen": 5, "King": 6}
