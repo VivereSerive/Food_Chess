@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://mhdy3qanvcfa"]
+
+[ext_resource type="PackedScene" uid="uid://erms6nefq1bi" path="res://scenes/chess/chessBoard.tscn" id="1_a3akq"]
+
+[node name="chessMain" type="Node2D" unique_id=1528915941]
+
+[node name="chessBoard" parent="." unique_id=916899171 instance=ExtResource("1_a3akq")]
+
+[node name="camera2d" type="Camera2D" parent="chessBoard" unique_id=2117854788]
