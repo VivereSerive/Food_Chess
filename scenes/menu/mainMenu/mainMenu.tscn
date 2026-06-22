@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c58q0l3jt8hpa"]
 
 [ext_resource type="Script" uid="uid://c3nrstuxllmoy" path="res://scripts/menu/mainMenu/mainMenu.gd" id="1_087po"]
+[ext_resource type="FontFile" uid="uid://cmd7xq5uy5asf" path="res://assets/fonts/urbanistFonts/Urbanist-Black.ttf" id="2_m5eyt"]
 
 [node name="mainMenu" type="Control" unique_id=263773144]
 layout_mode = 3
@@ -36,9 +37,22 @@ grow_vertical = 2
 
 [node name="btnStart" type="Button" parent="vBoxContainer" unique_id=1018816662]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m5eyt")
+theme_override_font_sizes/font_size = 33
+text = "Start"
 
 [node name="btnSettings" type="Button" parent="vBoxContainer" unique_id=544485838]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m5eyt")
+theme_override_font_sizes/font_size = 33
+text = "Settings"
 
 [node name="btnExit" type="Button" parent="vBoxContainer" unique_id=2098176112]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m5eyt")
+theme_override_font_sizes/font_size = 33
+text = "Exit"
+
+[connection signal="pressed" from="vBoxContainer/btnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="vBoxContainer/btnSettings" to="." method="_on_btn_settings_pressed"]
+[connection signal="pressed" from="vBoxContainer/btnExit" to="." method="_on_btn_exit_pressed"]
