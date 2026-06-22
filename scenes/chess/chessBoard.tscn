@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://erms6nefq1bi"]
+
+[ext_resource type="Script" uid="uid://dtofyqkg2nlki" path="res://scripts/chess/chessBoard.gd" id="1_db4py"]
+
+[node name="chessBoard" type="Node2D" unique_id=916899171]
+script = ExtResource("1_db4py")
