@@ -4,3 +4,13 @@
 
 [node name="chessBoard" type="Node2D" unique_id=916899171]
 script = ExtResource("1_db4py")
+
+[node name="boardSprite2D" type="Sprite2D" parent="." unique_id=1645817827]
+
+[node name="unitNode" type="Node2D" parent="." unique_id=1370816086]
+
+[node name="unitPosition" type="Node2D" parent="." unique_id=1513205534]
+
+[node name="playerTurn" type="Control" parent="." unique_id=510893542]
+layout_mode = 3
+anchors_preset = 0
