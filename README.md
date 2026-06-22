@@ -1,2 +1,0 @@
-# FoodChess
-Chess but Food
