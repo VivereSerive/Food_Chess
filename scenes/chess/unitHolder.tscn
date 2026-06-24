@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bhgis6y6h175g"]
 
 [ext_resource type="Script" uid="uid://b3y0yx0704qjv" path="res://scripts/chess/unitHolder.gd" id="1_olmy4"]
+[ext_resource type="Script" uid="uid://dfwsfmb337y64" path="res://scripts/scriptManager/scriptManager.gd" id="2_j35oq"]
+[ext_resource type="Script" uid="uid://ck5ihyv4wo3ct" path="res://scripts/chess/unitHolder/unitAnim.gd" id="3_20efw"]
+[ext_resource type="Script" uid="uid://djnifhymut3na" path="res://scripts/chess/unitHolder/unitInput.gd" id="4_g1bpv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cjli"]
 size = Vector2(16, 16)
@@ -8,9 +11,18 @@ size = Vector2(16, 16)
 [node name="unitHolder" type="Sprite2D" unique_id=1211602258]
 script = ExtResource("1_olmy4")
 
+[node name="scriptManager" type="Node" parent="." unique_id=673605297]
+script = ExtResource("2_j35oq")
+
+[node name="unitAnim" type="Node" parent="scriptManager" unique_id=1901003748]
+script = ExtResource("3_20efw")
+
+[node name="unitInput" type="Node" parent="scriptManager" unique_id=1011675536]
+script = ExtResource("4_g1bpv")
+
 [node name="unitHitbox" type="Area2D" parent="." unique_id=409597789]
 
 [node name="collisionShape2d" type="CollisionShape2D" parent="unitHitbox" unique_id=632746906]
 shape = SubResource("RectangleShape2D_1cjli")
 
-[connection signal="input_event" from="unitHitbox" to="." method="_on_unit_hitbox_input_event"]
+[connection signal="input_event" from="unitHitbox" to="scriptManager/unitInput" method="_on_unit_hitbox_input_event"]

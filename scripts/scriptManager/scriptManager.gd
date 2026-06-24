@@ -1,6 +1,7 @@
 extends Node
 
-var parent = get_parent()
-# Called when the node enters the scene tree for the first time.
+## Code
 func _ready() -> void:
-	print(parent)
+	var parent = get_parent()
+	for child in get_children():
+		child.parent = parent
