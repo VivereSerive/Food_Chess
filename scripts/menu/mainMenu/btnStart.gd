@@ -28,7 +28,7 @@ func userHover() -> void:
 	tween.tween_property(self, "scale:x", 1.2, 0.1)
 	tween.tween_property(self, "scale:y", 0.75, 0.13)
 	tween.tween_property(self, "rotation_degrees", randf_range(5.0, 10.0) * [-1.0, 1.0].pick_random(), 0.1)
-	tween.chain().tween_property(self, "scale.x", 1.1, 0.15)
+	tween.chain().tween_property(self, "scale:x", 1.1, 0.15)
 	tween.tween_property(self, "scale:y", 1.1, 0.15)
 	tween.tween_property(self, "rotation_degrees", 0.0, 0.1)
 
