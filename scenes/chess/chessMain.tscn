@@ -7,3 +7,5 @@
 [node name="chessBoard" parent="." unique_id=916899171 instance=ExtResource("1_a3akq")]
 
 [node name="camera2d" type="Camera2D" parent="chessBoard" unique_id=2117854788]
+offset = Vector2(71, -71)
+zoom = Vector2(4.185, 4.185)

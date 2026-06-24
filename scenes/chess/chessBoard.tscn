@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://erms6nefq1bi"]
 
 [ext_resource type="Script" uid="uid://dtofyqkg2nlki" path="res://scripts/chess/chessBoard.gd" id="1_db4py"]
+[ext_resource type="Texture2D" uid="uid://bqckfsaaf0rhe" path="res://assets/chessArt/boards/board_plain_03.png" id="2_ptr70"]
 
 [node name="chessBoard" type="Node2D" unique_id=916899171]
 script = ExtResource("1_db4py")
 
 [node name="boardSprite2D" type="Sprite2D" parent="." unique_id=1645817827]
+texture = ExtResource("2_ptr70")
+offset = Vector2(71, -71)
 
 [node name="unitNode" type="Node2D" parent="." unique_id=1370816086]
 

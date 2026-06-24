@@ -26,6 +26,10 @@ naming/node_name_casing=1
 naming/scene_name_casing=4
 naming/script_name_casing=4
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
