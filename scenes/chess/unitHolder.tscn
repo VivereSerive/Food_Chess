@@ -25,4 +25,5 @@ script = ExtResource("4_g1bpv")
 [node name="collisionShape2d" type="CollisionShape2D" parent="unitHitbox" unique_id=632746906]
 shape = SubResource("RectangleShape2D_1cjli")
 
+[connection signal="unitClicked" from="." to="scriptManager/unitAnim" method="_on_unit_holder_unit_clicked"]
 [connection signal="input_event" from="unitHitbox" to="scriptManager/unitInput" method="_on_unit_hitbox_input_event"]

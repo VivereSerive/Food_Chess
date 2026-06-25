@@ -4,9 +4,10 @@ extends Sprite2D
 var tween: Tween
 
 # Signals
-signal unitHover(unit)
 signal unitClicked(unit)
 
-# Nodes
+# Nodes	
 @onready var unit_hitbox: Area2D = $unitHitbox
 @onready var script_manager: Node = $scriptManager
+@onready var unit_anim: Node = $scriptManager/unitAnim
+@onready var unit_input: Node = $scriptManager/unitInput
